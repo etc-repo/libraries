@@ -17,8 +17,9 @@ HashMap 클래스
 * <code>void clear()</code> : 저장된 모든 객체(key, value)를 제거함
 
 
-코드1
+코드
 ---
+* put/get
 ```java
 Map<String, String> map = new HashMap<String, String>();
     
@@ -34,7 +35,7 @@ Map<String, String> map = new HashMap<String, String>();
     System.out.println(map.get("d"));
     System.out.println(map.get(null));
 ```
-
+* containsKey/containsValue
 ```java
 Map<String, String> map = new HashMap<String, String>();
         
@@ -49,6 +50,7 @@ Map<String, String> map = new HashMap<String, String>();
     System.out.println(map.containsKey("a"));
     System.out.println(map.containsValue("Z"));
 ```
+* keySet()/values()/entrySet()
 ```java
 Map<String, String> map = new HashMap<String, String>();
         
@@ -69,7 +71,7 @@ Map<String, String> map = new HashMap<String, String>();
     }
 
 ```
-
+* replace()
 ```java
    //replace
     System.out.println("map_before: "+ map);        
