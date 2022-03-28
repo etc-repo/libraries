@@ -13,4 +13,25 @@
 * map은 똑같은 key가 중복되어 들어갈 수 없음
 * 중복되어 들어가게 되면 나중에 대입한 값으로 변환됨
 
+<pre>
+<code>
+Map<String, String> map = new HashMap<>();
+map.put("001","gildong");
+map.put("002","minsu");
+map.put("003","hoho"); //중복된 key값으로 나중에 value값으로 대체
+
+System.out.println(map.size());
+System.out.println(map.get("001");
+
+Set<String> set = new HashSet<>();
+set = map.keySet();
+
+Iterator<String> iter = set.iterator();
+
+while(iter.hasNext()){
+String key = iter.next();
+System.out.println("key : + key + "value: " + map.get(key));
+}
+</code>
+</pre>
 
