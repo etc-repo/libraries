@@ -15,8 +15,7 @@
 
 코드
 -----------------
-<pre>
-<code>
+```java
 Map<String, String> map = new HashMap<>();
 map.put("001","gildong");
 map.put("002","minsu");
@@ -34,6 +33,6 @@ while(iter.hasNext()){
 String key = iter.next();
 System.out.println("key : + key + "value: " + map.get(key));
 }
-</code>
-</pre>
+```
+
 
