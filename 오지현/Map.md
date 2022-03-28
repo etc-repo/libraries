@@ -9,7 +9,7 @@
 * <code>get(Object) : Object</code> : get에 key값을 넣어서 key에 해당하는 value를 가져올 수 있음
 * <code>keySet() : Set</code> : 모든 키들을 set자료구조 형태로 가져올 수 있음
 * <code>put(Object, Object) : void</code> : put(key, value)형식으로 값을 집어 넣을 수 있음
-<hr></hr>
+
 * map은 똑같은 key가 중복되어 들어갈 수 없음
 * 중복되어 들어가게 되면 나중에 대입한 값으로 변환됨
 
