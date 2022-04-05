@@ -23,3 +23,61 @@ file 클래스
 <code>canRead()</code> : 응용 프로그램이 이 추상 경로 이름으로 표시된 파일을 실행할 수 있는지 여부를 테스트합니다  
 <code>canWrite()</code> : 응용 프로그램이 이 추상 경로 이름으로 표시된 파일을 수정할 수 있는지 여부를 테스트합니다.  
 <code>createNewFile()</code> : 두 추상 경로 이름을 사전적으로 비교합니다.  
+
+코드
+---
+```java
+import java.io.*;
+
+
+
+class FileEx1
+
+{
+
+	public static void main(String[] args) throws IOException
+
+	{
+
+		File f = new File("c:\\jdk1.5\\work\\ch14\\FileEx1.java");
+
+		String fileName = f.getName();
+
+		int pos = fileName.lastIndexOf(".");
+
+
+
+		System.out.println("경로를 제외한 파일이름 - " + f.getName());
+
+		System.out.println("확장자를 제외한 파일이름 - " + fileName.substring(0,pos));
+
+		System.out.println("확장자 - " + fileName.substring(pos+1));
+
+
+
+		System.out.println("경로를 포함한 파일이름 - " + f.getPath());
+
+		System.out.println("파일의 절대경로        - " + f.getAbsolutePath());
+
+		System.out.println("파일이 속해 있는 디렉토리 - " + f.getParent());
+
+		System.out.println();
+
+		System.out.println("File.pathSeparator - " + File.pathSeparator); // 파일 전체 path 구분자. ;
+
+		System.out.println("File.pathSeparatorChar - " + File.pathSeparatorChar);
+
+		System.out.println("File.separator - " + File.separator); // 디렉터리 구분다. /
+
+		System.out.println("File.separatorChar - " + File.separatorChar);
+
+		System.out.println();
+
+		System.out.println("user.dir="+System.getProperty("user.dir"));
+
+		System.out.println("sun.boot.class.path=" + System.getProperty("sun.boot.class.path"));
+
+	}
+
+}
+```
