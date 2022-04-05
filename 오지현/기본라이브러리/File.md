@@ -12,10 +12,10 @@ file 클래스
 
 생성자
 ---
-<code>File(File parent, String child)</code> : 부모 추상 경로 이름과 자식 경로 이름 문자열에서 새 인스턴스를 만듦
-<code>File(String pathname)</code> : 지정된 경로 이름 문자열을 추상 경로 이름으로 변환하여 새 인스턴스를 만듦
-<code>File(String parent, String child)</code> : 부모 경로 이름 문자열과 자식 경로 이름 문자열에서 새 인스턴스를 만듦
-<code>File(URI uri)</code> : 지정된 URI를 추상 경로 이름으로 변환하여 새 인스턴스를 만듦
+<code>File(File parent, String child)</code> : 부모 추상 경로 이름과 자식 경로 이름 문자열에서 새 인스턴스를 만듦  
+<code>File(String pathname)</code> : 지정된 경로 이름 문자열을 추상 경로 이름으로 변환하여 새 인스턴스를 만듦  
+<code>File(String parent, String child)</code> : 부모 경로 이름 문자열과 자식 경로 이름 문자열에서 새 인스턴스를 만듦  
+<code>File(URI uri)</code> : 지정된 URI를 추상 경로 이름으로 변환하여 새 인스턴스를 만듦  
 
 메서드
 ---
