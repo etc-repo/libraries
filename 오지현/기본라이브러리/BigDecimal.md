@@ -5,7 +5,7 @@ BigDecimal 클래스
 
 코드
 ---
-'''java
+```java
 import java.math.BigDecimal;
 
 public class Test {
@@ -18,4 +18,4 @@ public class Test {
         }
     }
 }
-'''
+```
