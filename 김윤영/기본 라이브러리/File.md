@@ -70,12 +70,13 @@ String parent = f.getParent(); //"c:\\windows"
 - isDirectory(): 경로명이 디렉토리에 따라 true/false를 리턴
 
 ```java
+File f = new File("c:\\windows\\system.ini");
 if(f.isFile())
   System.out.println(f.getPath() + "는 파일입니다.");
 else if(f.isDirectory())
   System.out.println(f.getPath() + "는 디렉터리입니다.");
 
-
+// c:\\windows\system.ini는 파일입니다.
 ```
 
 
