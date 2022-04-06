@@ -72,7 +72,7 @@ class Ex2
 
 	public static void main(String[] args) throws IOException {
 
-		File f = new File("F:\\\\eclipse-workspace\\\\Week2\\\\src", "Ex3.txt");
+		File f = new File("F:\\eclipse-workspace\\Week2\\src", "Ex3.txt"); // 경로 구분 "/" 도 됨
 		f.createNewFile();
 		System.out.println(f.canExecute());
 		System.out.println(f.canRead());
