@@ -5,18 +5,18 @@ BigDecimal 클래스
 
 필드
 ---
-* 흔히 쓰이는 값은 상수로 정의
+* 흔히 쓰이는 값은 상수로 정의  
 <code>BigDecimal.ZERO</code> : 0  
 <code>BigDecimal.ONE</code> : 1  
 <code>BigDecimal.TEN</code> : 10   
 
 메소드
 ---
-* 산술연산
-** add(BigDecimal augend)  
-** subtract(BigDecimal subtrahend)  
-** multiply(BigDecimal multiplicand)  
-** divide(BigDecimal divisor)  
+* 산술연산  
+ * add(BigDecimal augend)  
+ * subtract(BigDecimal subtrahend)  
+ * multiply(BigDecimal multiplicand)  
+ * divide(BigDecimal divisor)  
 
 코드
 ---
