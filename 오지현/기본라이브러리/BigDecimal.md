@@ -14,24 +14,28 @@ BigDecimal의 연산
 코드
 ---
 ```java
-double a = 10.0000;
-double b = 3.0000;
+public class Ex1 {
+	public static void main(String[] args) {
+		double value = 1.0;
+		for (int i = 0; i < 10; ++i) {
+			value += 0.1;
+			System.out.println(value);
+		}
+	}
+}
+```
 
-// 기대값: 13
-// 실제값: 13.000001999999999
-a + b;
-
-// 기대값: 7
-// 실제값: 6.999999999999999
-a - b;
-
-// 기대값: 30
-// 실제값: 30.000013000000997
-a * b;
-
-// 기대값: 3.33333...
-// 실제값: 3.333332555555814
-a / b;
+```
+1.1
+1.2000000000000002
+1.3000000000000003
+1.4000000000000004
+1.5000000000000004
+1.6000000000000005
+1.7000000000000006
+1.8000000000000007
+1.9000000000000008
+2.000000000000001
 ```
 
 
@@ -63,43 +67,53 @@ public class Test {
 ```
 
 ```java
-BigDecimal a = new BigDecimal("10");
-BigDecimal b = new BigDecimal("3");
+import java.math.BigDecimal;
 
-// 더하기
-// 13
-a.add(b);
+public class Ex1 {
+	public static void main(String[] args) {
+		 BigDecimal a = new BigDecimal("250.125");
+	        BigDecimal b = new BigDecimal("150.352");
+	        
+	        System.out.println("더하기 : " + a.add(b));
+	        System.out.println("빼기   : " + a.subtract(b));
+	        System.out.println("곱하기 : " + a.multiply(b));
+	        System.out.println("나누기 : " + a.divide(b));
+	}
+}
+```
+```
+더하기 : 400.477
+빼기   : 99.773
+곱하기 : 37606.794000
+Exception in thread "main" java.lang.ArithmeticException: Non-terminating decimal expansion; no exact representable decimal result.
+	at java.base/java.math.BigDecimal.divide(BigDecimal.java:1766)
+	at Ex1.main(Ex1.java:12)
+```
 
-// 빼기
-// 7
-a.subtract(b);
+```java
+import java.math.BigDecimal;
+import java.math.MathContext;
 
-// 곱하기
-// 30
-a.multiply(b);
 
-// 나누기
-// 3.333333...
-a.divide(b);
+public class Ex1 {
+	public static void main(String[] args) {
+		 BigDecimal a = new BigDecimal("250.125");
+	        BigDecimal b = new BigDecimal("150.352");
+	        
+	        System.out.println("더하기 : " + a.add(b));
+	        System.out.println("빼기   : " + a.subtract(b));
+	        System.out.println("곱하기 : " + a.multiply(b));
+	        System.out.println("나누기 : " + a.divide(b,MathContext.DECIMAL32))
+;
 
-// 나누기
-// 3.333
-a.divide(b, 3, RoundingMode.HALF_EVEN);
 
-// 나누기 후 나머지
-// 전체 자리수를 34개로 제한
-// 1
-a.remainder(b, MathContext.DECIMAL128);
+	}
+}
+```
+```
+더하기 : 400.477
+빼기   : 99.773
+곱하기 : 37606.794000
+나누기 : 1.663596
 
-// 절대값
-// 3
-new BigDecimal("-3").abs();
-
-// 두 수 중 최소값
-// 3
-a.min(b);
-
-// 두 수 중 최대값
-// 10
-a.max(b);
 ```
