@@ -29,9 +29,7 @@ file 클래스
 ```java
 import java.io.*;
 
-
-
-class FileEx1
+class Ex2
 
 {
 
@@ -39,7 +37,7 @@ class FileEx1
 
 	{
 
-		File f = new File("c:\\jdk1.5\\work\\ch14\\FileEx1.java");
+		File f = new File("F:\\eclipse-workspace\\Week2\\src\\Ex2.java");
 
 		String fileName = f.getName();
 
@@ -67,7 +65,7 @@ class FileEx1
 
 		System.out.println("File.pathSeparatorChar - " + File.pathSeparatorChar);
 
-		System.out.println("File.separator - " + File.separator); // 디렉터리 구분다. /
+		System.out.println("File.separator - " + File.separator); // 디렉터리 구분자. /
 
 		System.out.println("File.separatorChar - " + File.separatorChar);
 
@@ -80,4 +78,22 @@ class FileEx1
 	}
 
 }
+```
+
+```
+경로를 제외한 파일이름 - Ex2.java
+확장자를 제외한 파일이름 - Ex2
+확장자 - java
+경로를 포함한 파일이름 - F:\eclipse-workspace\Week2\src\Ex2.java
+파일의 절대경로        - F:\eclipse-workspace\Week2\src\Ex2.java
+파일이 속해 있는 디렉토리 - F:\eclipse-workspace\Week2\src
+
+File.pathSeparator - ;
+File.pathSeparatorChar - ;
+File.separator - \
+File.separatorChar - \
+
+user.dir=F:\eclipse-workspace\Week2
+sun.boot.class.path=null
+
 ```
