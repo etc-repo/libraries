@@ -87,3 +87,21 @@ File.separatorChar - \
 user.dir=F:\eclipse-workspace\Week2
 sun.boot.class.path=null
 ```
+```java
+//기존에는 없는 파일을 새로 생성하는 코드
+import java.io.*;
+
+class Ex2
+
+{
+
+	public static void main(String[] args) throws IOException {
+
+		File i = new File("F:\\eclipse-workspace\\Week2\\src", "Ex3.java");
+
+		i.createNewFile();
+
+	}
+}
+```
+![image](https://user-images.githubusercontent.com/86463944/161923784-550023d0-30ee-44b5-b9bb-2eb6819578b7.png)
