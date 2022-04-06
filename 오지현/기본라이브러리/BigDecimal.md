@@ -3,16 +3,24 @@ BigDecimal 클래스
 *  산술, 스케일 조작, 반올림, 비교, 해싱 및 형식 변환을 위한 작업을 제공함
 *  돈 계산과 같이 중요한 작업을 할 때 사용
 
-
-BigDecimal의 연산
+필드
 ---
-<code>BigDecimal add(BigDecimal val)</code>  
-<code>BigDecimal subtract(BigDecimal val)</code>  
-<code>BigDecimal divide(BigDecimal val)</code>  
-<code>BigDecimal remainder(BigDecimal val)</code>  
+<code>BigDecimal.ZERO</code> : 0  
+<code>BigDecimal.ONE</code> : 1  
+<code>BigDecimal.TEN</code> : 10   
+
+메소드
+---
+<code>add(BigDecimal augend)</code> : 
+<code>subtract(BigDecimal subtrahend)</code> :
+<code>multiply(BigDecimal multiplicand)</code> :
+<code>divide(BigDecimal divisor)</code> :  
+  
+<code>scale</code> : 소수점 첫째 자리부터 오른쪽부터 0이 아닌 수로 끝나는 위치까지의 총 소수점 자리수
 
 코드
 ---
+* float, double은 근사치를 제공할 뿐, 정확한 값을 제공하지 못함
 ```java
 public class Ex1 {
 	public static void main(String[] args) {
@@ -37,7 +45,6 @@ public class Ex1 {
 1.9000000000000008
 2.000000000000001
 ```
-
 
 ```java
 import java.math.BigDecimal;
@@ -65,7 +72,9 @@ public class Test {
 1.9
 2.0
 ```
-
+* 주의해야 할 점
+*  소수점 몇 자리까지 계산할 건지를 정해줘야 함
+* 10을 3으로 나누면 3.333333333333.... 와 같이 값이 끝없이 나오기 때문에 에러가 발생함
 ```java
 import java.math.BigDecimal;
 
@@ -81,6 +90,7 @@ public class Ex1 {
 	}
 }
 ```
+
 ```
 더하기 : 400.477
 빼기   : 99.773
@@ -104,6 +114,7 @@ public class Ex1 {
 	        System.out.println("빼기   : " + a.subtract(b));
 	        System.out.println("곱하기 : " + a.multiply(b));
 	        System.out.println("나누기 : " + a.divide(b,MathContext.DECIMAL32))
+		//MathContext.DECIMAL32 : 계산 정밀도를 소수점 포함 7자리까지 설정
 ;
 
 
