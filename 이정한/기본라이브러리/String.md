@@ -129,7 +129,7 @@
 
 
 ## `substring(int beginIndex, int endIndex)`
-- `beginIndex`부터 `endIndex`까지 문자열 자르기
+- `beginIndex`부터 `endIndex` 전 까지 문자열 자르기
 
 
 
