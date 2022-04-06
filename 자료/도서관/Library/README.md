@@ -1,55 +1,7 @@
-# AllMiniGames
-- Demo minigames of `MiniGameWorld`
+# 도서관
+- 생성자, 자료(getter, setter), toString() 각 클래스에 맞게 만들기
+- 배웠던 라이브러리 클래스 마음대로 추가 가능
 
-# Download
-- [Download](download)
-- If you want to donwload all minigames, download `AllMiniGames-x.x.jar` file in [Download](download)
-
-# Update Check
-- Minigames version will be checked if `check-update` option of `plugins/MiniGameWorld/settings.yml` is true
-
----
-
-# MiniGames Wiki
-## Solo
-- [FitTool](wiki/FitTool.md)
-- [HitMob](wiki/HitMob.md)
-- [Tiny](wiki/Tiny.md)
-
-
-## Solo Battle
-- [MKN](wiki/MKN.md)
-- [Bridge](wiki/Bridge.md)
-- [FallingBlock](wiki/FallingBlock.md)
-- [OnePunch](wiki/OnePunch.md)
-- [PVP](wiki/PVP.md)
-- [RandomScore](wiki/RandomScore.md)
-- [RockScissorPaper](wiki/RockScissorPaper.md)
-- [ScoreClimbing](wiki/ScoreClimbing.md)
-- [Spleef](wiki/Spleef.md)
-- [SuperMob](wiki/SuperMob.md)
-- [TimingPVP](wiki/TimingPVP.md)
-- [Parkour](wiki/Parkour.md)
-- [FallingItem](wiki/FallingItem.md)
-- [Center](wiki/Center.md)
-- [ItsMine](wiki/ItsMine.md)
-- [LavaUp](wiki/LavaUp.md)
-- [Dropper](wiki/Dropper.md)
-- [StandOnBlock](wiki/StandOnBlock.md)
-- [DodgeBlock](wiki/DodgeBlock.md)
-
-
-## Team
-- [BreedMob](wiki/BreedMob.md)
-- [RemoveBlock](wiki/RemoveBlock.md)
-- [TeamTiny](wiki/TeamTiny.md)
-
-
-## Team Battle
-- [HiddenArcher](wiki/HiddenArcher.md)
-- [MoreHit](wiki/MoreHit.md)
-- [PassMob](wiki/PassMob.md)
-
-
-## Custom
-- [Tutorial](wiki/Tutorial.md)
+# 프로젝트 실행
+- 새로운 프로젝트 생성 후 소스코드 복사 해도 됨
+- eclipse로 Library 폴더 열어도 됨
