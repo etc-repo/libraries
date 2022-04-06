@@ -19,59 +19,6 @@ HashMap 클래스
 
 코드
 ---
-* put/get
-```java
-import java.util.*;
-public class Ex3 {
-	public static void main(String[] args) {
-		Map<String, String> map = new HashMap<String, String>();
-	    
-	    //add value
-	    map.put("a", "A");
-	    map.put("a", "AA");
-	    map.put("b", "B");
-	    map.put("c", "C");
-	    map.put(null, "NullValue");
-	    
-	    //get value
-	    System.out.println(map.get("a"));
-	    System.out.println(map.get("d"));
-	    System.out.println(map.get(null));
-	}
-}
-```
-
-```
-AA
-null
-NullValue
-```
-* containsKey/containsValue
-```java
-import java.util.*;
-public class Ex3 {
-	public static void main(String[] args) {
-		Map<String, String> map = new HashMap<String, String>();
-        
-	    //add value
-	    map.put("a", "A");
-	    map.put("a", "AA");
-	    map.put("b", "B");
-	    map.put("c", "C");
-	    map.put(null, "NullValue");
-	        
-	    //check if key/
-	    System.out.println(map.containsKey("a"));
-	    System.out.println(map.containsValue("Z"));
-	}
-}
-```
-
-```
-true
-false
-```
-* <code>replace(key, oldValue, newValue)</code> : 해당 key에 oldValue 값이 있을 때에만 값을 newvalue로 대체  
 
 ```java
 import java.util.*;
@@ -98,6 +45,10 @@ public class Ex3 {
 map_before: {null=NullValue, a=AA, b=B, c=C}
 true
 map_after: {null=NullValue, a=Z, b=B, c=C}
+true
+false
+true
+{}
 ```
 
 
