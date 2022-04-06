@@ -49,7 +49,7 @@ public class Ex1 {
 ```java
 import java.math.BigDecimal;
 
-public class Test {
+public class Ex1 {
     public static void main(String[] args) {
         BigDecimal value = new BigDecimal("1.0");
         BigDecimal addValue = new BigDecimal("0.1");
