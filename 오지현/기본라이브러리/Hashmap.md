@@ -12,9 +12,9 @@ HashMap 클래스
 ---
 * <code>boolean containsKey(Object key)</code> : 지정된 key가 포함되어 있는지 여부를 반환함
 * <code>boolean containsValue(Object value)</code> : 지정된 value가 포함되어 있는지 여부를 반환함
-* <code>Set entrySet()</code> : 저장된 키와 값을 엔트리(키와 값의 결합)의 형태로 Set에 저장하여 반환함
-* <code>Set keySet()</code> : 저장된 모든 key를 Set에 저장하여 반환함
 * <code>void clear()</code> : 저장된 모든 객체(key, value)를 제거함
+* <code>replace(key, oldValue, newValue)</code> : 해당 key에 oldValue 값이 있을 때에만 값을 newvalue로 대체  
+
 
 
 코드
@@ -71,7 +71,8 @@ public class Ex3 {
 true
 false
 ```
-* replace()
+* <code>replace(key, oldValue, newValue)</code> : 해당 key에 oldValue 값이 있을 때에만 값을 newvalue로 대체  
+
 ```java
 import java.util.*;
 
@@ -79,17 +80,24 @@ public class Ex3 {
 	public static void main(String[] args) {
 		Map<String, String> map = new HashMap<String, String>();
 
-		System.out.println("map_before: " + map);
-		System.out.println(map.replace("a", "AA", "Z"));
-		System.out.println("map_after: " + map);
+		// add value
+		map.put("a", "A");
+		map.put("a", "AA");
+		map.put("b", "B");
+		map.put("c", "C");
+		map.put(null, "NullValue");
+		
+		System.out.println("map_before: "+ map);        
+	        System.out.println(map.replace("a", "AA", "Z"));
+	        System.out.println("map_after: "+ map);
+
 	}
 }
-
 ```
 ```
-map_before: {}
-false
-map_after: {}
+map_before: {null=NullValue, a=AA, b=B, c=C}
+true
+map_after: {null=NullValue, a=Z, b=B, c=C}
 ```
 
 
