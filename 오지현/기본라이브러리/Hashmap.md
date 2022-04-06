@@ -21,62 +21,75 @@ HashMap 클래스
 ---
 * put/get
 ```java
-Map<String, String> map = new HashMap<String, String>();
-    
-    //add value
-    map.put("a", "A");
-    map.put("a", "AA");
-    map.put("b", "B");
-    map.put("c", "C");
-    map.put(null, "NullValue");
-    
-    //get value
-    System.out.println(map.get("a"));
-    System.out.println(map.get("d"));
-    System.out.println(map.get(null));
+import java.util.*;
+public class Ex3 {
+	public static void main(String[] args) {
+		Map<String, String> map = new HashMap<String, String>();
+	    
+	    //add value
+	    map.put("a", "A");
+	    map.put("a", "AA");
+	    map.put("b", "B");
+	    map.put("c", "C");
+	    map.put(null, "NullValue");
+	    
+	    //get value
+	    System.out.println(map.get("a"));
+	    System.out.println(map.get("d"));
+	    System.out.println(map.get(null));
+	}
+}
+```
+
+```
+AA
+null
+NullValue
 ```
 * containsKey/containsValue
 ```java
-Map<String, String> map = new HashMap<String, String>();
+import java.util.*;
+public class Ex3 {
+	public static void main(String[] args) {
+		Map<String, String> map = new HashMap<String, String>();
         
-    //add value
-    map.put("a", "A");
-    map.put("a", "AA");
-    map.put("b", "B");
-    map.put("c", "C");
-    map.put(null, "NullValue");
-        
-    //check if key/
-    System.out.println(map.containsKey("a"));
-    System.out.println(map.containsValue("Z"));
+	    //add value
+	    map.put("a", "A");
+	    map.put("a", "AA");
+	    map.put("b", "B");
+	    map.put("c", "C");
+	    map.put(null, "NullValue");
+	        
+	    //check if key/
+	    System.out.println(map.containsKey("a"));
+	    System.out.println(map.containsValue("Z"));
+	}
+}
 ```
-* keySet()/values()/entrySet()
-```java
-Map<String, String> map = new HashMap<String, String>();
-        
-    //add value        
-    map.put("a", "A");
-    map.put("a", "AA");
-    map.put("b", "B");
-    map.put("c", "C");
-    map.put(null, "NullValue");
-    
-    //iteration 
-    for (String key : map.keySet()) {
-        System.out.print(map.get(key) + "/");
-    }
-        
-    for (Map.Entry<String, String> entry : map.entrySet()) {
-        System.out.print(entry + "/");
-    }
 
+```
+true
+false
 ```
 * replace()
 ```java
-   //replace
-    System.out.println("map_before: "+ map);        
-    System.out.println(map.replace("a", "AA", "Z"));
-    System.out.println("map_after: "+ map);
+import java.util.*;
+
+public class Ex3 {
+	public static void main(String[] args) {
+		Map<String, String> map = new HashMap<String, String>();
+
+		System.out.println("map_before: " + map);
+		System.out.println(map.replace("a", "AA", "Z"));
+		System.out.println("map_after: " + map);
+	}
+}
 
 ```
+```
+map_before: {}
+false
+map_after: {}
+```
+
 
