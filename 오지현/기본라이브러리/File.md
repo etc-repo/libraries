@@ -12,17 +12,17 @@ file 클래스
 
 생성자
 ---
-<code>File(File parent, String child)</code> : 주어진 부모 파일의 pathname과 자식 pathname으로 새로운 File 객체를 생성함
-<code>File(String pathname)</code> : pathname에 해당되는 파일의 File객체를 생성함
-<code>File(String parent, String child)</code> : 부모 pathname과 자식 pathname으로 새로운 File 객체를 생성함
-<code>File(URI uri)</code> : file url 경로에 대한 파일의 File 객체를 생성함  
+<code>File(File parent, String child)</code> : 주어진 부모 파일의 pathname과 자식 pathname으로 새로운 File 객체를 생성함  
+<code>File(String pathname)</code> : pathname에 해당되는 파일의 File객체를 생성함  
+<code>File(String parent, String child)</code> : 부모 pathname과 자식 pathname으로 새로운 File 객체를 생성함  
+<code>File(URI uri)</code> : file url 경로에 대한 파일의 File 객체를 생성함    
 
 메서드
 ---
-<code>canExecute()</code> : 응용프로그램이 표시된 파일을 실행할 수 있는지 여부를 테스트
-<code>canRead()</code> : 응용 프로그램이 표시된 파일을 읽을 수 있는지 여부를 테스트  
-<code>canWrite()</code> : 응용 프로그램이 표시된 파일을 수정할 수 있는지 여부를 테스트  
-<code>createNewFile()</code> : 새로운 파일을 생성  
+<code>canExecute()</code> : 응용프로그램이 표시된 파일을 실행할 수 있는지 여부를 테스트  
+<code>canRead()</code> : 응용 프로그램이 표시된 파일을 읽을 수 있는지 여부를 테스트    
+<code>canWrite()</code> : 응용 프로그램이 표시된 파일을 수정할 수 있는지 여부를 테스트   
+<code>createNewFile()</code> : 새로운 파일을 생성   
 
 코드
 ---
