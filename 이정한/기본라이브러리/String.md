@@ -1,6 +1,8 @@
 # String
 - 문자열 관련 클래스
-- 주의할 것: 대부분의 문자열의 메서드는 반환값을 이용해서 적용해야 함 (String 클래스의 예외적인 특징) (효율을 위해서 객체이지만 기본 타입처럼 동작)
+- 주의할 것: 대부분의 문자열의 메서드는 반환값을 이용해서 적용해야 함 (String 클래스의 예외적인 특징) (효율을 위해서 객체이지만 기본 타입처럼 동작), hashcode() 동작이 다른 객체라도 같음
+
+
 
 ---
 
@@ -150,8 +152,37 @@
 - 보통은 `"" + obj`로 사용
 
 
+## `hashCode()`
+보통은 객체간의 구별을 위해서 사용하는것으로 다른 객체라면 무조건 다른 주소값을 가지지만, 보통 객체는 equals()로 비교할 때 hashCode()끼리 비교되야 하므로 String은 hashCode()의
+결과값이 String문자열이 같으면 같은 값을 반환하도록 되어있다. 그러므로 String과 같이 특수한 hashCode()를 override한 경우에는 `System.identityHashCode(Object)`를 사용해서 
+두 객체를 구별해야 한다
+```java
+public class Test {
+	public static void main(String[] args) {
+		// 일반
+		Test t1 = new Test();
+		Test t2 = new Test();
+		printHashcode(t1); // 305808283
+		printHashcode(t2); // 2111991224
 
+		// string
+		String a = "a";
+		String b = "a";
+		String c = new String("a");
+		printHashcode(a); // 97
+		printHashcode(b); // 97
+		printHashcode(c); // 97
+		System.out.println(System.identityHashCode(a)); // 292938459
+		System.out.println(System.identityHashCode(b)); // 292938459
+		System.out.println(System.identityHashCode(c)); // 292938459
 
+	}
+
+	static void printHashcode(Object obj) {
+		System.out.println(obj.hashCode());
+	}
+}
+```
 
 ---
 
