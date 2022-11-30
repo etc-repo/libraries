@@ -15,6 +15,10 @@
 - Checked exception: 단순히 Exception을 상속, (compiled exception으로도 불림), IDE에서 체크 됨
 - Unchecked exception: RuntimeException 을 상속함, IDE에서 체크 불가능, 실행중에 발생
 
+- Checked exception은 컴파일시간 때 검사되므로 만약 특정 메서드가 Checked Exception을 throws하면 무조건 처리를 해야 한다. 이것은 가끔은 `번거로움`
+을 유발할 수 있다.
+- Unchecked exception은 런타임시간 때 검사되므로 컴파일하고 실행하면서 해당 exception을 맞닦뜨리기 전까지 처리를 안해도 된다. 이것은 `무조건` 예외를 처리안하고 특정 예외만 처리
+하게 할 수 있는 `유연성`을 가진다. (하지만 위험할 수 있음)
 ---
 
 # Fields
